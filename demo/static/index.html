@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青柚生活旗舰店 · 智能客服</title>
+<style>
+  :root { --bg:#f3f5f1; --card:#ffffff; --ink:#1f2a22; --muted:#6b756d; --line:#dfe5dc; --accent:#2f7d4f;
+          --accent-soft:#e4f1e8; --warn:#b4541a; --warn-soft:#fbeee4; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif; font-size:15px; line-height:1.6; }
+  header { padding:14px 24px; background:var(--card); border-bottom:1px solid var(--line);
+           display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; }
+  header h1 { font-size:18px; margin:0; }
+  header span { color:var(--muted); font-size:13px; }
+  main { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:16px; padding:16px 24px;
+         max-width:1280px; margin:0 auto; height:calc(100vh - 58px); }
+  section { background:var(--card); border:1px solid var(--line); border-radius:10px; display:flex;
+            flex-direction:column; min-height:0; }
+  .title { padding:10px 16px; border-bottom:1px solid var(--line); font-weight:600; font-size:14px; }
+  #chat { flex:1; overflow-y:auto; padding:16px; display:flex; flex-direction:column; gap:12px; }
+  .msg { max-width:82%; padding:9px 13px; border-radius:12px; white-space:pre-wrap; word-break:break-word; }
+  .user { align-self:flex-end; background:var(--accent); color:#fff; border-bottom-right-radius:3px; }
+  .bot { align-self:flex-start; background:#eef1ec; border-bottom-left-radius:3px; }
+  .bot.rejected { background:var(--warn-soft); }
+  .tag { display:inline-block; font-size:12px; padding:0 7px; border-radius:9px; margin-bottom:4px;
+         background:var(--accent-soft); color:var(--accent); }
+  .rejected .tag { background:#f6dcc8; color:var(--warn); }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chip { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:14px; padding:3px 11px;
+          font-size:13px; cursor:pointer; font-family:inherit; }
+  .chip:hover { border-color:var(--accent); color:var(--accent); }
+  form { display:flex; gap:8px; padding:12px 16px; border-top:1px solid var(--line); }
+  input { flex:1; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:15px;
+          font-family:inherit; outline:none; }
+  input:focus { border-color:var(--accent); }
+  button.send { padding:0 20px; border:0; border-radius:8px; background:var(--accent); color:#fff; font-size:15px;
+                cursor:pointer; font-family:inherit; }
+  #hot { padding:10px 16px 0; }
+  #detail { flex:1; overflow-y:auto; padding:14px 16px; font-size:14px; }
+  #detail .row { display:flex; justify-content:space-between; gap:10px; padding:3px 0; color:var(--muted); }
+  #detail .row b { color:var(--ink); font-weight:600; text-align:right; }
+  .cand { border:1px solid var(--line); border-radius:8px; padding:9px 11px; margin-top:9px; }
+  .cand.first { border-color:var(--accent); }
+  .cand .q { font-weight:600; }
+  .cand .m { color:var(--muted); font-size:13px; }
+  .bar { position:relative; height:8px; background:#edf0ea; border-radius:4px; margin:6px 0 2px; }
+  .bar i { position:absolute; left:0; top:0; bottom:0; border-radius:4px; background:var(--accent); }
+  .bar u { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--warn); }
+  .legend { color:var(--muted); font-size:12px; margin-top:10px; }
+  .legend u { display:inline-block; width:2px; height:11px; background:var(--warn); vertical-align:-1px; margin-right:4px; }
+  @media (max-width: 860px) { main { grid-template-columns:1fr; height:auto; } section { min-height:420px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>青柚生活旗舰店 · 智能客服小柚</h1>
+  <span id="meta">正在载入模型信息…</span>
+</header>
+<main>
+  <section>
+    <div class="title">对话</div>
+    <div id="hot"></div>
+    <div id="chat"></div>
+    <form id="form">
+      <input id="input" autocomplete="off" placeholder="请输入您的问题，例如：今天下单什么时候能发货">
+      <button class="send" type="submit">发送</button>
+    </form>
+  </section>
+  <section>
+    <div class="title">检索详情（模型对最近一个问题的判断）</div>
+    <div id="detail"><div class="row">提问后，这里显示相似度最高的 3 条 FAQ。</div></div>
+  </section>
+</main>
+<script>
+const chat = document.getElementById('chat'), input = document.getElementById('input');
+function add(cls, text, tag, chips) {
+  const div = document.createElement('div');
+  div.className = 'msg ' + cls;
+  if (tag) { const t = document.createElement('div'); t.className = 'tag'; t.textContent = tag; div.appendChild(t);
+             div.appendChild(document.createElement('br')); }
+  div.appendChild(document.createTextNode(text));
+  if (chips && chips.length) {
+    const box = document.createElement('div'); box.className = 'chips';
+    chips.forEach(c => box.appendChild(chip(c)));
+    div.appendChild(box);
+  }
+  chat.appendChild(div); chat.scrollTop = chat.scrollHeight;
+}
+function chip(text) {
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.textContent = text;
+  b.onclick = () => ask(text); return b;
+}
+function showDetail(r) {
+  const d = document.getElementById('detail'); d.innerHTML = '';
+  const rows = [['规范化后的输入', r.normalized], ['处理结果', r.status === 'answered' ? '回答' : '不作答，建议联系人工'],
+                ['最高相似度', r.confidence.toFixed(3)], ['回答阈值', r.threshold.toFixed(3)],
+                ['是否最接近拒识样例', r.near_reject ? '是（因此不作答）' : '否'],
+                ['编码与检索耗时', r.latency_ms + ' ms']];
+  rows.forEach(([k, v]) => { const e = document.createElement('div'); e.className = 'row';
+    e.appendChild(document.createTextNode(k)); const b = document.createElement('b'); b.textContent = v;
+    e.appendChild(b); d.appendChild(e); });
+  r.candidates.forEach((c, i) => {
+    const e = document.createElement('div'); e.className = 'cand' + (i === 0 ? ' first' : '');
+    const q = document.createElement('div'); q.className = 'q'; q.textContent = (i + 1) + '. ' + c.question;
+    const bar = document.createElement('div'); bar.className = 'bar';
+    const fill = document.createElement('i'); fill.style.width = Math.max(0, Math.min(1, c.score)) * 100 + '%';
+    const mark = document.createElement('u'); mark.style.left = Math.max(0, Math.min(1, r.threshold)) * 100 + '%';
+    bar.appendChild(fill); bar.appendChild(mark);
+    const m = document.createElement('div'); m.className = 'm';
+    m.textContent = '相似度 ' + c.score.toFixed(3) + ' · ' + c.category + ' · 命中索引句：' + c.matched;
+    e.appendChild(q); e.appendChild(bar); e.appendChild(m); d.appendChild(e);
+  });
+  const l = document.createElement('div'); l.className = 'legend';
+  l.innerHTML = '<u></u>竖线为回答阈值；还会参考拒识样例，无法回答时建议联系人工。';
+  d.appendChild(l);
+}
+async function ask(text) {
+  text = text.trim(); if (!text) return;
+  add('user', text); input.value = '';
+  try {
+    const res = await fetch('/api/ask', {method: 'POST', headers: {'Content-Type': 'application/json'},
+                                         body: JSON.stringify({query: text})});
+    const r = await res.json();
+    if (r.status === 'answered') add('bot', r.answer, '匹配：' + r.question);
+    else if (r.status === 'rejected') add('bot rejected', r.answer, '未匹配到合适的问题', r.candidates.map(c => c.question));
+    else add('bot', r.answer);
+    if (r.candidates.length) showDetail(r);
+  } catch (e) { add('bot rejected', '服务暂时不可用，请稍后再试。'); }
+  input.focus();
+}
+document.getElementById('form').addEventListener('submit', e => { e.preventDefault(); ask(input.value); });
+fetch('/api/info').then(r => r.json()).then(info => {
+  document.getElementById('meta').textContent = 'FAQ ' + info.faq_count + ' 条 · 索引 ' + info.index_size +
+    ' 句 · 拒识样例 ' + info.reject_size + ' 句 · 模型 ' + info.model + '（' + (info.parameters / 1e6).toFixed(1) + 'M 参数，' + info.device + '）';
+  const hot = document.getElementById('hot'); const box = document.createElement('div'); box.className = 'chips';
+  info.hot.forEach(q => box.appendChild(chip(q))); hot.appendChild(box);
+  add('bot', '您好，欢迎光临青柚生活旗舰店！我是智能客服小柚，可以回答发货、物流、退换货、优惠、发票等常见问题。');
+});
+</script>
+</body>
+</html>

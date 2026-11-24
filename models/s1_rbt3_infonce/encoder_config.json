@@ -1,0 +1,35 @@
+{
+  "arch": "rbt3",
+  "pooling": "mean",
+  "stage": "pairs",
+  "args": {
+    "arch": "rbt3",
+    "loss": "infonce",
+    "pooling": "mean",
+    "epochs": 2,
+    "batch_size": 64,
+    "lr": 5e-05,
+    "temperature": 0.05,
+    "seed": 1,
+    "evals_per_epoch": 2,
+    "max_train": 0,
+    "init": "",
+    "name": "s1_rbt3_infonce",
+    "grad_ckpt": false,
+    "mem_frac": 0.32
+  },
+  "best": {
+    "step": 11242,
+    "epoch": 2.0,
+    "train_loss": 0.19891145452857018,
+    "seconds": 628.8370616436005,
+    "pair_auc": 0.8103353982417246,
+    "faq_top1_std": 0.5165562913907285,
+    "faq_mrr_std": 0.6597314201618837,
+    "faq_top1_exp": 0.7152317880794702,
+    "faq_mrr_exp": 0.7970619152738357,
+    "faq_e2e_acc": 0.7033333333333334,
+    "dev_score": 0.7501976243035846
+  },
+  "parameters": 37886208
+}

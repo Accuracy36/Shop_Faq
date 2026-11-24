@@ -1,0 +1,35 @@
+{
+  "arch": "bilstm",
+  "pooling": "mean",
+  "stage": "pairs",
+  "args": {
+    "arch": "bilstm",
+    "loss": "both",
+    "pooling": "mean",
+    "epochs": 10,
+    "batch_size": 64,
+    "lr": 0.001,
+    "temperature": 0.05,
+    "seed": 1,
+    "evals_per_epoch": 1,
+    "max_train": 0,
+    "init": "",
+    "name": "s1_bilstm_seed1",
+    "grad_ckpt": false,
+    "mem_frac": 0.32
+  },
+  "best": {
+    "step": 16863,
+    "epoch": 3.0,
+    "train_loss": 5.757798981908334,
+    "seconds": 891.3378431797028,
+    "pair_auc": 0.8916812967062411,
+    "faq_top1_std": 0.3841059602649007,
+    "faq_mrr_std": 0.4845527173341743,
+    "faq_top1_exp": 0.4966887417218543,
+    "faq_mrr_exp": 0.612567013560391,
+    "faq_e2e_acc": 0.6,
+    "dev_score": 0.6062835067801955
+  },
+  "parameters": 4123648
+}

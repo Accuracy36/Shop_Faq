@@ -1,0 +1,35 @@
+{
+  "arch": "transformer",
+  "pooling": "mean",
+  "stage": "pairs",
+  "args": {
+    "arch": "transformer",
+    "loss": "both",
+    "pooling": "mean",
+    "epochs": 10,
+    "batch_size": 64,
+    "lr": 0.0005,
+    "temperature": 0.05,
+    "seed": 1,
+    "evals_per_epoch": 1,
+    "max_train": 0,
+    "init": "",
+    "name": "s1_transformer_seed1",
+    "grad_ckpt": false,
+    "mem_frac": 0.32
+  },
+  "best": {
+    "step": 33726,
+    "epoch": 6.0,
+    "train_loss": 5.361877959386625,
+    "seconds": 1553.2127952575684,
+    "pair_auc": 0.8842826320849753,
+    "faq_top1_std": 0.3576158940397351,
+    "faq_mrr_std": 0.4615105644906969,
+    "faq_top1_exp": 0.5231788079470199,
+    "faq_mrr_exp": 0.6329995795227582,
+    "faq_e2e_acc": 0.6,
+    "dev_score": 0.6164997897613791
+  },
+  "parameters": 4401408
+}

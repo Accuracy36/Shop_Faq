@@ -1,0 +1,35 @@
+{
+  "arch": "roberta",
+  "pooling": "mean",
+  "stage": "pairs",
+  "args": {
+    "arch": "roberta",
+    "loss": "both",
+    "pooling": "mean",
+    "epochs": 1,
+    "batch_size": 64,
+    "lr": 3e-05,
+    "temperature": 0.05,
+    "seed": 2,
+    "evals_per_epoch": 4,
+    "max_train": 0,
+    "init": "",
+    "name": "s1_roberta_seed2",
+    "grad_ckpt": true,
+    "mem_frac": 0.32
+  },
+  "best": {
+    "step": 1405,
+    "epoch": 0.24995552392812667,
+    "train_loss": 6.339870709117197,
+    "seconds": 264.96354150772095,
+    "pair_auc": 0.9015278373618769,
+    "faq_top1_std": 0.6026490066225165,
+    "faq_mrr_std": 0.7367076631977294,
+    "faq_top1_exp": 0.7947019867549668,
+    "faq_mrr_exp": 0.863428991905813,
+    "faq_e2e_acc": 0.7,
+    "dev_score": 0.7817144959529065
+  },
+  "parameters": 101677056
+}

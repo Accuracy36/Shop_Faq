@@ -1,0 +1,364 @@
+{
+  "checks": {
+    "数据划分无交叉": true,
+    "s1_模型与轮次完整": true,
+    "s2_模型与轮次完整": true,
+    "逐条预测与汇总一致": true,
+    "评测配置齐全": true,
+    "三种子统计完整": true,
+    "均值与样本标准差复算一致": true,
+    "伪标注遵守预设筛选条件": true
+  },
+  "details": {
+    "s1_": [
+      {
+        "name": "s1_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_roberta_seed2",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_roberta_seed3",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_seed2",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_seed3",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_transformer_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_bilstm_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_cosent",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_infonce",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s1_rbt3_cls",
+        "files": true,
+        "finished": true,
+        "selected": true
+      }
+    ],
+    "s2_": [
+      {
+        "name": "s2_faqonly_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_simcse_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_real_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_nostage1_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_roberta_seed2",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_roberta_seed3",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_rbt3_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_rbt3_seed2",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_rbt3_seed3",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_transformer_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_final_bilstm_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      },
+      {
+        "name": "s2_pseudo_roberta_seed1",
+        "files": true,
+        "finished": true,
+        "selected": true
+      }
+    ],
+    "predictions": [
+      {
+        "name": "bm25",
+        "matched": true,
+        "e2e": 0.6407035175879398,
+        "real_top1": 0.6108374384236454
+      },
+      {
+        "name": "bm25_real",
+        "matched": true,
+        "e2e": 0.7010050251256281,
+        "real_top1": 0.6945812807881774
+      },
+      {
+        "name": "raw_rbt3",
+        "matched": true,
+        "e2e": 0.5904522613065326,
+        "real_top1": 0.5566502463054187
+      },
+      {
+        "name": "raw_roberta",
+        "matched": true,
+        "e2e": 0.635678391959799,
+        "real_top1": 0.5911330049261084
+      },
+      {
+        "name": "s1_bilstm_seed1",
+        "matched": true,
+        "e2e": 0.5703517587939698,
+        "real_top1": 0.5024630541871922
+      },
+      {
+        "name": "s1_rbt3_cls",
+        "matched": true,
+        "e2e": 0.6080402010050251,
+        "real_top1": 0.6354679802955665
+      },
+      {
+        "name": "s1_rbt3_cosent",
+        "matched": true,
+        "e2e": 0.5879396984924623,
+        "real_top1": 0.6551724137931034
+      },
+      {
+        "name": "s1_rbt3_infonce",
+        "matched": true,
+        "e2e": 0.6030150753768844,
+        "real_top1": 0.5862068965517241
+      },
+      {
+        "name": "s1_rbt3_seed1",
+        "matched": true,
+        "e2e": 0.6155778894472361,
+        "real_top1": 0.645320197044335
+      },
+      {
+        "name": "s1_rbt3_seed2",
+        "matched": true,
+        "e2e": 0.6306532663316583,
+        "real_top1": 0.6995073891625616
+      },
+      {
+        "name": "s1_rbt3_seed3",
+        "matched": true,
+        "e2e": 0.6130653266331658,
+        "real_top1": 0.6502463054187192
+      },
+      {
+        "name": "s1_roberta_seed1",
+        "matched": true,
+        "e2e": 0.6608040201005025,
+        "real_top1": 0.7044334975369458
+      },
+      {
+        "name": "s1_roberta_seed1_realidx",
+        "matched": true,
+        "e2e": 0.678391959798995,
+        "real_top1": 0.7832512315270936
+      },
+      {
+        "name": "s1_roberta_seed1_realidx_reject",
+        "matched": true,
+        "e2e": 0.7160804020100503,
+        "real_top1": 0.7832512315270936
+      },
+      {
+        "name": "s1_roberta_seed2",
+        "matched": true,
+        "e2e": 0.678391959798995,
+        "real_top1": 0.7192118226600985
+      },
+      {
+        "name": "s1_roberta_seed3",
+        "matched": true,
+        "e2e": 0.6608040201005025,
+        "real_top1": 0.7339901477832512
+      },
+      {
+        "name": "s1_transformer_seed1",
+        "matched": true,
+        "e2e": 0.5100502512562815,
+        "real_top1": 0.43842364532019706
+      },
+      {
+        "name": "s2_faqonly_roberta_seed1",
+        "matched": true,
+        "e2e": 0.7160804020100503,
+        "real_top1": 0.7438423645320197
+      },
+      {
+        "name": "s2_final_bilstm_seed1",
+        "matched": true,
+        "e2e": 0.6658291457286433,
+        "real_top1": 0.5862068965517241
+      },
+      {
+        "name": "s2_final_rbt3_seed1",
+        "matched": true,
+        "e2e": 0.7688442211055276,
+        "real_top1": 0.7980295566502463
+      },
+      {
+        "name": "s2_final_rbt3_seed2",
+        "matched": true,
+        "e2e": 0.7562814070351759,
+        "real_top1": 0.8078817733990148
+      },
+      {
+        "name": "s2_final_rbt3_seed3",
+        "matched": true,
+        "e2e": 0.7562814070351759,
+        "real_top1": 0.7980295566502463
+      },
+      {
+        "name": "s2_final_roberta_seed1",
+        "matched": true,
+        "e2e": 0.7788944723618091,
+        "real_top1": 0.8719211822660099
+      },
+      {
+        "name": "s2_final_roberta_seed1_pseudoidx",
+        "matched": true,
+        "e2e": 0.7562814070351759,
+        "real_top1": 0.8669950738916257
+      },
+      {
+        "name": "s2_final_roberta_seed1_threshold_only",
+        "matched": true,
+        "e2e": 0.7688442211055276,
+        "real_top1": 0.8719211822660099
+      },
+      {
+        "name": "s2_final_roberta_seed2",
+        "matched": true,
+        "e2e": 0.7939698492462312,
+        "real_top1": 0.8472906403940886
+      },
+      {
+        "name": "s2_final_roberta_seed3",
+        "matched": true,
+        "e2e": 0.7914572864321608,
+        "real_top1": 0.8571428571428571
+      },
+      {
+        "name": "s2_final_transformer_seed1",
+        "matched": true,
+        "e2e": 0.6683417085427136,
+        "real_top1": 0.5665024630541872
+      },
+      {
+        "name": "s2_nostage1_roberta_seed1",
+        "matched": true,
+        "e2e": 0.7663316582914573,
+        "real_top1": 0.8620689655172413
+      },
+      {
+        "name": "s2_pseudo_roberta_seed1",
+        "matched": true,
+        "e2e": 0.7738693467336684,
+        "real_top1": 0.8866995073891626
+      },
+      {
+        "name": "s2_real_roberta_seed1",
+        "matched": true,
+        "e2e": 0.7562814070351759,
+        "real_top1": 0.8423645320197044
+      },
+      {
+        "name": "s2_simcse_roberta_seed1",
+        "matched": true,
+        "e2e": 0.6608040201005025,
+        "real_top1": 0.7044334975369458
+      },
+      {
+        "name": "tfidf",
+        "matched": true,
+        "e2e": 0.592964824120603,
+        "real_top1": 0.5812807881773399
+      }
+    ],
+    "evaluation_count": 33,
+    "pseudo_available": true
+  }
+}

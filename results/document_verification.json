@@ -1,0 +1,43 @@
+[
+  {
+    "docx": "D:\\!WorkSpace\\2026 Fall Deep Learning\\HWs\\8\\PB24000178_周宇翔_8.docx",
+    "pdf": "D:\\!WorkSpace\\2026 Fall Deep Learning\\HWs\\8\\PB24000178_周宇翔_8.pdf",
+    "pages": 57,
+    "tables": 11,
+    "checks": {
+      "pdf_all_pages_have_content": true,
+      "no_replacement_glyph": true,
+      "identity": true,
+      "page_numbers": true,
+      "a4": true,
+      "no_placeholders": true,
+      "eight_complete_source_files": true,
+      "appendix_matches_actual_files": true,
+      "two_sets_of_twenty_translations": true
+    },
+    "hashes": {
+      ".docx": "07a6ddc7390087ba232d98143b247c133d4e697be25f519c4635f8b37da8452b",
+      ".pdf": "02dbc82e65836eac7fa137458e6a0ef02cc1470377341ec618b7c88731879977"
+    }
+  },
+  {
+    "docx": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\report\\PB24000178+周宇翔+简易购物自动问答系统.docx",
+    "pdf": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\report\\PB24000178+周宇翔+简易购物自动问答系统.pdf",
+    "pages": 22,
+    "tables": 11,
+    "checks": {
+      "pdf_all_pages_have_content": true,
+      "no_replacement_glyph": true,
+      "identity": true,
+      "page_numbers": true,
+      "a4": true,
+      "no_placeholders": true,
+      "provided_git_url": true,
+      "ai_annotation_disclosure": true
+    },
+    "hashes": {
+      ".docx": "9fbdb160fe2462b163764d54ba9f7231979f62715c2e7a8cb74a63650f6d455c",
+      ".pdf": "156ef6a5557260ddc66e5b26da0b65f454464825e9ca84728682d8de453a1a17"
+    }
+  }
+]

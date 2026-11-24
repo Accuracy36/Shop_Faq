@@ -1,0 +1,36 @@
+{
+  "arch": "roberta",
+  "pooling": "mean",
+  "stage": "faq",
+  "args": {
+    "mode": "faq",
+    "init": "s1_roberta_seed3",
+    "name": "s2_final_roberta_seed3",
+    "real": true,
+    "oos": 60,
+    "oos_margin": 0.3,
+    "oos_weight": 1.0,
+    "pseudo": "",
+    "real_index": true,
+    "reject": true,
+    "steps": 200,
+    "eval_every": 25,
+    "lr": 1e-05,
+    "batch_size": 128,
+    "temperature": 0.05,
+    "seed": 3,
+    "grad_ckpt": true,
+    "mem_frac": 0.55
+  },
+  "best": {
+    "step": 175,
+    "train_loss": 0.047065152302384373,
+    "seconds": 130.66219353675842,
+    "faq_top1_exp": 0.8609271523178808,
+    "faq_mrr_exp": 0.9154052349416588,
+    "faq_e2e_acc": 0.79,
+    "threshold": 0.6997859477996826,
+    "dev_score": 0.8527026174708294
+  },
+  "parameters": 101677056
+}

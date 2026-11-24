@@ -1,0 +1,211 @@
+{
+  "pairs": {
+    "train": {
+      "LCQMC": {
+        "total": 225565,
+        "positive": 127382
+      },
+      "BQ": {
+        "total": 99889,
+        "positive": 49910
+      },
+      "AFQMC": {
+        "total": 34333,
+        "positive": 10573
+      }
+    },
+    "dev": {
+      "LCQMC": {
+        "total": 8773,
+        "positive": 4381
+      },
+      "BQ": {
+        "total": 9996,
+        "positive": 4997
+      },
+      "AFQMC": {
+        "total": 0,
+        "positive": 0
+      }
+    },
+    "test": {
+      "LCQMC": {
+        "total": 12461,
+        "positive": 6228
+      },
+      "BQ": {
+        "total": 9995,
+        "positive": 4995
+      },
+      "AFQMC": {
+        "total": 4316,
+        "positive": 1338
+      }
+    }
+  },
+  "pair_sentence_length": {
+    "LCQMC": {
+      "n": 451130,
+      "mean": 10.474040742136413,
+      "median": 10.0,
+      "p95": 18.0,
+      "max": 36
+    },
+    "BQ": {
+      "n": 199778,
+      "mean": 11.256579803581976,
+      "median": 10.0,
+      "p95": 23.0,
+      "max": 40
+    },
+    "AFQMC": {
+      "n": 68666,
+      "mean": 12.776745405295197,
+      "median": 12.0,
+      "p95": 23.0,
+      "max": 40
+    }
+  },
+  "ecd": {
+    "distinct_utterances": 150914,
+    "occurrences": 1363061,
+    "length": {
+      "n": 150914,
+      "mean": 10.552407331327776,
+      "median": 9.0,
+      "p95": 22.0,
+      "max": 30
+    },
+    "train_sessions": 500000,
+    "train_customer_utts": 1411106,
+    "train_distinct": 151578,
+    "train_distinct_after_removing_eval": 150914,
+    "eval_last_turn_utts": 5094,
+    "eval_distinct": 4476,
+    "eval_sampled": 700
+  },
+  "faq": {
+    "entries": 60,
+    "categories": {
+      "物流配送": 12,
+      "订单问题": 8,
+      "售后退换": 11,
+      "优惠活动": 9,
+      "支付发票": 3,
+      "商品咨询": 10,
+      "客户服务": 7
+    },
+    "index_texts": 420,
+    "index_length": {
+      "n": 420,
+      "mean": 7.969047619047619,
+      "median": 8.0,
+      "p95": 12.0,
+      "max": 20
+    },
+    "answer_length": {
+      "n": 60,
+      "mean": 48.166666666666664,
+      "median": 50.0,
+      "p95": 60.05,
+      "max": 65
+    }
+  },
+  "constructed": {
+    "n": 180,
+    "length": {
+      "n": 180,
+      "mean": 12.783333333333333,
+      "median": 13.0,
+      "p95": 18.0,
+      "max": 21
+    }
+  },
+  "real": {
+    "train": {
+      "n": 698,
+      "in_scope": 370,
+      "oos": 328,
+      "multi_label": 39,
+      "faqs_covered": 46,
+      "length": {
+        "n": 698,
+        "mean": 8.558739255014327,
+        "median": 7.0,
+        "p95": 19.149999999999977,
+        "max": 30
+      },
+      "category": {
+        "客户服务": 73,
+        "范围外": 328,
+        "物流配送": 140,
+        "商品咨询": 37,
+        "优惠活动": 84,
+        "订单问题": 20,
+        "售后退换": 13,
+        "支付发票": 3
+      }
+    },
+    "dev": {
+      "n": 300,
+      "in_scope": 151,
+      "oos": 149,
+      "multi_label": 26,
+      "faqs_covered": 37,
+      "length": {
+        "n": 300,
+        "mean": 9.746666666666666,
+        "median": 9.0,
+        "p95": 21.0,
+        "max": 28
+      },
+      "category": {
+        "售后退换": 10,
+        "物流配送": 59,
+        "范围外": 149,
+        "商品咨询": 12,
+        "优惠活动": 39,
+        "客户服务": 14,
+        "订单问题": 16,
+        "支付发票": 1
+      }
+    },
+    "test": {
+      "n": 398,
+      "in_scope": 203,
+      "oos": 195,
+      "multi_label": 35,
+      "faqs_covered": 39,
+      "length": {
+        "n": 398,
+        "mean": 9.829145728643216,
+        "median": 9.0,
+        "p95": 22.0,
+        "max": 29
+      },
+      "category": {
+        "物流配送": 85,
+        "范围外": 195,
+        "售后退换": 12,
+        "优惠活动": 37,
+        "商品咨询": 30,
+        "订单问题": 18,
+        "客户服务": 21
+      }
+    }
+  },
+  "char_vocab": 4811,
+  "checks": {
+    "real_train_dev_overlap": 0,
+    "real_train_test_overlap": 0,
+    "real_dev_test_overlap": 0,
+    "eval_queries_in_ecd_unlabeled": 0,
+    "eval_queries_in_index": 0,
+    "constructed_in_real_train": 0,
+    "pairs_train_test_overlap": 0,
+    "pairs_train_dev_overlap": 0,
+    "labels_valid": true,
+    "every_faq_has_6_similar": true,
+    "every_faq_has_3_constructed": true
+  }
+}

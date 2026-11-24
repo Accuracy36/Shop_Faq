@@ -1,0 +1,9 @@
+{
+  "train_sessions": 500000,
+  "train_customer_utts": 1411106,
+  "train_distinct": 151578,
+  "train_distinct_after_removing_eval": 150914,
+  "eval_last_turn_utts": 5094,
+  "eval_distinct": 4476,
+  "eval_sampled": 700
+}

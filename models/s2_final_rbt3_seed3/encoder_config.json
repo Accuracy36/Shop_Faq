@@ -1,0 +1,36 @@
+{
+  "arch": "rbt3",
+  "pooling": "mean",
+  "stage": "faq",
+  "args": {
+    "mode": "faq",
+    "init": "s1_rbt3_seed3",
+    "name": "s2_final_rbt3_seed3",
+    "real": true,
+    "oos": 60,
+    "oos_margin": 0.3,
+    "oos_weight": 1.0,
+    "pseudo": "",
+    "real_index": true,
+    "reject": true,
+    "steps": 200,
+    "eval_every": 25,
+    "lr": 2e-05,
+    "batch_size": 128,
+    "temperature": 0.05,
+    "seed": 3,
+    "grad_ckpt": false,
+    "mem_frac": 0.55
+  },
+  "best": {
+    "step": 50,
+    "train_loss": 1.7821355628967286,
+    "seconds": 8.440200090408325,
+    "faq_top1_exp": 0.8609271523178808,
+    "faq_mrr_exp": 0.9202538631346577,
+    "faq_e2e_acc": 0.7966666666666666,
+    "threshold": 0.6307956576347351,
+    "dev_score": 0.8584602649006622
+  },
+  "parameters": 37886208
+}

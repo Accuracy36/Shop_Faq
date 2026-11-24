@@ -1,0 +1,659 @@
+{
+  "model": "s2_final_roberta_seed1",
+  "counts": {
+    "correct": 134,
+    "rejected": 176,
+    "missed": 64,
+    "false_answer": 19,
+    "wrong_answer": 5
+  },
+  "confusions": [
+    {
+      "gold": "ship_time",
+      "predicted": "urge_ship",
+      "n": 1
+    },
+    {
+      "gold": "urge_ship",
+      "predicted": "ship_time",
+      "n": 1
+    },
+    {
+      "gold": "discount",
+      "predicted": "coupon_fail",
+      "n": 1
+    },
+    {
+      "gold": "urge_ship",
+      "predicted": "thanks",
+      "n": 1
+    },
+    {
+      "gold": "cancel_order",
+      "predicted": "return_policy",
+      "n": 1
+    }
+  ],
+  "missed": [
+    {
+      "query": "那就退了吧要不就换榴莲干吧",
+      "gold": "exchange",
+      "predicted": "how_return",
+      "confidence": -1.0,
+      "matched": "我要退货怎么弄"
+    },
+    {
+      "query": "我关注已经是要送了买的话又说送这个啊",
+      "gold": "gift",
+      "predicted": "gift",
+      "confidence": 0.6643,
+      "matched": "我这个有啥赠品"
+    },
+    {
+      "query": "给我发韵达吧亲",
+      "gold": "choose_courier",
+      "predicted": "choose_courier",
+      "confidence": -1.0,
+      "matched": "那给我发百世汇通吧"
+    },
+    {
+      "query": "20包先买卖试试可以的话大量进货",
+      "gold": "bulk",
+      "predicted": "urge_ship",
+      "confidence": -1.0,
+      "matched": "那我现在下单麻烦帮我发货哦两盒可以发吧"
+    },
+    {
+      "query": "正常昨天就应该送昨天不送今天也不送",
+      "gold": "logistics_stuck",
+      "predicted": "missing",
+      "confidence": 0.604,
+      "matched": "两代都到了都没有赠品"
+    },
+    {
+      "query": "店家",
+      "gold": "greeting",
+      "predicted": "greeting",
+      "confidence": 0.6085,
+      "matched": "老板"
+    },
+    {
+      "query": "好的山核桃一定要发新鲜的阿不要潮的糊的麻烦你们帮忙检查下阿",
+      "gold": "production_date",
+      "predicted": "urge_ship",
+      "confidence": 0.4634,
+      "matched": "我现在拍希望亲保证质量哦尽快发"
+    },
+    {
+      "query": "芒果干昨天到了但是我发现里面有的有点湿是咋回事啊",
+      "gold": "damaged",
+      "predicted": "damaged",
+      "confidence": 0.4779,
+      "matched": "打开发现已经变质了"
+    },
+    {
+      "query": "发天天吧",
+      "gold": "choose_courier",
+      "predicted": "urge_ship",
+      "confidence": -1.0,
+      "matched": "麻烦最好今天发出"
+    },
+    {
+      "query": "谢谢能给发申通因为受了点伤不方便走那么远感谢",
+      "gold": "choose_courier",
+      "predicted": "choose_courier",
+      "confidence": -1.0,
+      "matched": "不要申通快递"
+    },
+    {
+      "query": "看到量大的包装也不贵所以申请了退款",
+      "gold": "cancel_order",
+      "predicted": "cancel_order",
+      "confidence": 0.5851,
+      "matched": "申请退款了麻烦同意一下"
+    },
+    {
+      "query": "那大部分碎了应该赔吧",
+      "gold": "damaged",
+      "predicted": "damaged",
+      "confidence": 0.5657,
+      "matched": "快递压坏了能赔吗"
+    },
+    {
+      "query": "95你再送我几个好不好",
+      "gold": "gift",
+      "predicted": "gift",
+      "confidence": 0.6403,
+      "matched": "多买能不能送点东西"
+    },
+    {
+      "query": "皮薄吗那个味道好吃",
+      "gold": "recommend",
+      "predicted": "quality",
+      "confidence": 0.6232,
+      "matched": "好吃吗"
+    },
+    {
+      "query": "您没有改价啊41运费",
+      "gold": "change_price",
+      "predicted": "change_price",
+      "confidence": 0.6525,
+      "matched": "运费算错了能改吗"
+    },
+    {
+      "query": "哦那就好我拍下南京什么时间到",
+      "gold": "arrival_time",
+      "predicted": "ship_time",
+      "confidence": 0.5751,
+      "matched": "亲在吗什么时间发货我21号回老家能收到吗"
+    },
+    {
+      "query": "再见祝生意兴隆",
+      "gold": "thanks",
+      "predicted": "thanks",
+      "confidence": 0.5998,
+      "matched": "麻烦你了"
+    },
+    {
+      "query": "哦哦好的买三份都不能优惠啊那我都不要了我可以给你晒图好评",
+      "gold": "discount",
+      "predicted": "discount",
+      "confidence": 0.6651,
+      "matched": "哦哦价钱不能再优惠吗"
+    },
+    {
+      "query": "谢谢真的不说了明天下午一点再来说",
+      "gold": "thanks",
+      "predicted": "thanks",
+      "confidence": -1.0,
+      "matched": "好谢谢一会拍"
+    },
+    {
+      "query": "换成大号圆满头黑檀的就行了对了",
+      "gold": "modify_order",
+      "predicted": "recommend",
+      "confidence": 0.4946,
+      "matched": "你好红檀好还是黑檀好"
+    },
+    {
+      "query": "为什么上次不是发了汇通吗邮政我收不到",
+      "gold": "choose_courier",
+      "predicted": "choose_courier",
+      "confidence": 0.6648,
+      "matched": "可以发邮政吗"
+    },
+    {
+      "query": "结束团购了吗",
+      "gold": "activity",
+      "predicted": "bulk",
+      "confidence": 0.4763,
+      "matched": "团购有优惠吗"
+    },
+    {
+      "query": "我要2包奶油味的只发了一包哦另一包什么味的",
+      "gold": "wrong_item",
+      "predicted": "wrong_item",
+      "confidence": 0.6048,
+      "matched": "口味发错了"
+    },
+    {
+      "query": "有4元的东西吗哪种口味好吃",
+      "gold": "recommend",
+      "predicted": "recommend",
+      "confidence": 0.6886,
+      "matched": "推荐哪个口味"
+    },
+    {
+      "query": "我拍错了那个小的拍一罐就够了我重新再拍吧",
+      "gold": "modify_order",
+      "predicted": "modify_order",
+      "confidence": 0.6836,
+      "matched": "亲我想重新拍想要3组"
+    },
+    {
+      "query": "要不我退了重新买吧要不然价格也不对",
+      "gold": "cancel_order",
+      "predicted": "change_price",
+      "confidence": 0.6481,
+      "matched": "麻烦把价格改一下"
+    },
+    {
+      "query": "請問茶針大和小的有什麼差別",
+      "gold": "compare",
+      "predicted": "compare",
+      "confidence": 0.6803,
+      "matched": "这两款有什么区别"
+    },
+    {
+      "query": "那个味道更好吃没有原味的",
+      "gold": "recommend",
+      "predicted": "recommend",
+      "confidence": 0.6386,
+      "matched": "有什么好吃的推荐"
+    },
+    {
+      "query": "能不能帮我先发",
+      "gold": "urge_ship",
+      "predicted": "urge_ship",
+      "confidence": -1.0,
+      "matched": "哦那明天给我早点发吧"
+    },
+    {
+      "query": "葡萄干要一袋黑的忘记分开拍了一袋黑加干一袋黄的",
+      "gold": "modify_order",
+      "predicted": "modify_order",
+      "confidence": -1.0,
+      "matched": "亲我想重新拍想要3组"
+    },
+    {
+      "query": "这个没收到然后不是说说口水巾吗怎么都没有",
+      "gold": "missing",
+      "predicted": "missing",
+      "confidence": 0.6273,
+      "matched": "我的货应该是没发完除了预售的还有个润肤露吧"
+    },
+    {
+      "query": "收到的都是退热贴",
+      "gold": "wrong_item",
+      "predicted": "return_address",
+      "confidence": -1.0,
+      "matched": "退货寄到哪个地址？"
+    },
+    {
+      "query": "你撤了吧我真要不了那么多你们是怕麻烦",
+      "gold": "cancel_order",
+      "predicted": "cancel_order",
+      "confidence": -1.0,
+      "matched": "我不想要了怎么取消"
+    },
+    {
+      "query": "你好我买了榴莲干和芒果干可以一起发货吗刚刚下单的",
+      "gold": "merge_order",
+      "predicted": "merge_order",
+      "confidence": 0.6525,
+      "matched": "分开下单会分开发货吗"
+    },
+    {
+      "query": "不是买一送一嘛我看评价这么说的",
+      "gold": "gift",
+      "predicted": "gift",
+      "confidence": 0.6554,
+      "matched": "是不是买二送一啊"
+    },
+    {
+      "query": "还要再加一袋能不能重拍啊",
+      "gold": "modify_order",
+      "predicted": "modify_order",
+      "confidence": 0.6628,
+      "matched": "亲我想重新拍想要3组"
+    },
+    {
+      "query": "粽子大吗",
+      "gold": "spec",
+      "predicted": "spec",
+      "confidence": 0.5931,
+      "matched": "尺寸是多大的"
+    },
+    {
+      "query": "等着要哦",
+      "gold": "urge_ship",
+      "predicted": "urge_ship",
+      "confidence": -1.0,
+      "matched": "我要用不能等"
+    },
+    {
+      "query": "好三天和等草莓干一起发",
+      "gold": "merge_order",
+      "predicted": "urge_ship",
+      "confidence": -1.0,
+      "matched": "那我现在下单麻烦帮我发货哦两盒可以发吧"
+    },
+    {
+      "query": "能速度吗我是打算端午节送给顾客的怕到时候回不来看到没",
+      "gold": "urge_ship",
+      "predicted": "logistics_stuck",
+      "confidence": 0.5683,
+      "matched": "怎么还没到啊过了这么多天还能吃吗"
+    },
+    {
+      "query": "本来想着好吃的好再买几袋结果货都不知道在哪",
+      "gold": "logistics_stuck",
+      "predicted": "track",
+      "confidence": 0.5898,
+      "matched": "我的包裹现在到哪里了"
+    },
+    {
+      "query": "还没发货吧我给你新地址叶子麻烦你尽快今天发货哦谢谢",
+      "gold": "change_address",
+      "predicted": "urge_ship",
+      "confidence": 0.6532,
+      "matched": "麻烦亲尽快给我发货"
+    },
+    {
+      "query": "麻烦那个包装弄好一点别弄坏了送人的谢谢",
+      "gold": "package",
+      "predicted": "package",
+      "confidence": 0.6875,
+      "matched": "送人的话包装好看吗"
+    },
+    {
+      "query": "你运费直接改改吧另个旺登麻烦才这里说下的",
+      "gold": "change_price",
+      "predicted": "change_price",
+      "confidence": 0.6711,
+      "matched": "运费算错了能改吗"
+    },
+    {
+      "query": "补发时间多久到",
+      "gold": "arrival_time",
+      "predicted": "arrival_time",
+      "confidence": 0.6812,
+      "matched": "到货时间大概是多久"
+    },
+    {
+      "query": "我从七点半问了一次十点多问了一次白天拖晚上拖",
+      "gold": "complaint",
+      "predicted": "urge_ship",
+      "confidence": 0.5551,
+      "matched": "今天会发货吗如今天不能发请退款吧我这不是急慢件的问题了太慢了"
+    },
+    {
+      "query": "好的你们今晚肯定不上班吧",
+      "gold": "work_time",
+      "predicted": "work_time",
+      "confidence": 0.6838,
+      "matched": "你们几点上班"
+    },
+    {
+      "query": "走申通吧我现在拍",
+      "gold": "choose_courier",
+      "predicted": "choose_courier",
+      "confidence": 0.5844,
+      "matched": "亲可以发申通快递吗"
+    },
+    {
+      "query": "我都拍了那你再送我几个好了这是第二次拍的",
+      "gold": "gift",
+      "predicted": "gift",
+      "confidence": 0.6401,
+      "matched": "那我拍啦别忘送礼物"
+    },
+    {
+      "query": "你家几个算一代",
+      "gold": "spec",
+      "predicted": "production_date",
+      "confidence": -1.0,
+      "matched": "亲日期是几月份的"
+    },
+    {
+      "query": "老板批发怎么卖的芒果干",
+      "gold": "bulk",
+      "predicted": "agency",
+      "confidence": 0.611,
+      "matched": "我想开店卖你们的产品"
+    },
+    {
+      "query": "这么点路程这个速度",
+      "gold": "logistics_stuck",
+      "predicted": "complaint",
+      "confidence": 0.4926,
+      "matched": "这样的速度估计脾气再好的人也会炸毛吧"
+    },
+    {
+      "query": "备注天天快递我已经付款了",
+      "gold": "choose_courier",
+      "predicted": "remark",
+      "confidence": -1.0,
+      "matched": "怎么给订单添加备注？"
+    },
+    {
+      "query": "上次邮政中午就收到了可以的还有更快的快递吗",
+      "gold": "choose_courier",
+      "predicted": "courier",
+      "confidence": 0.6318,
+      "matched": "有什么快递呢"
+    },
+    {
+      "query": "好嘚吧豆沙哦保质期也是一个月嚒",
+      "gold": "shelf_life",
+      "predicted": "shelf_life",
+      "confidence": 0.6263,
+      "matched": "商品的保质期是多久？"
+    },
+    {
+      "query": "你家的1茶针买10个便宜不",
+      "gold": "bulk",
+      "predicted": "bulk",
+      "confidence": 0.6832,
+      "matched": "买十箱能便宜吗"
+    },
+    {
+      "query": "换货还要我出邮费这事怎么都要解决的",
+      "gold": "return_fee",
+      "predicted": "shipping_fee",
+      "confidence": 0.6587,
+      "matched": "我选的怎么还要快递费呢选了好多"
+    },
+    {
+      "query": "今天再不发货我就退了算了",
+      "gold": "urge_ship",
+      "predicted": "urge_ship",
+      "confidence": 0.6873,
+      "matched": "没发我就退货"
+    },
+    {
+      "query": "上次买的那支很完美这支刀也不好还有裂痕换一支好的",
+      "gold": "damaged",
+      "predicted": "modify_order",
+      "confidence": 0.5162,
+      "matched": "口味选错了可以换吗"
+    },
+    {
+      "query": "这都派送了难道还没到站点",
+      "gold": "logistics_stuck",
+      "predicted": "urge_ship",
+      "confidence": 0.6485,
+      "matched": "都好几天了怎么还不发货"
+    },
+    {
+      "query": "一样打折好不好好吃再买你家的",
+      "gold": "discount",
+      "predicted": "merge_order",
+      "confidence": 0.5947,
+      "matched": "我刚才买了一袋想再买了一袋一起发可以吗买了两件能优惠点吗"
+    },
+    {
+      "query": "今天有活动吧聚划算以后还赠送吗",
+      "gold": "activity",
+      "predicted": "activity",
+      "confidence": -1.0,
+      "matched": "你们家在聚划算还什么时候做活动呢"
+    },
+    {
+      "query": "我收藏了送几包给我",
+      "gold": "gift",
+      "predicted": "gift",
+      "confidence": 0.6792,
+      "matched": "那我一样买一份也可以送两包么"
+    },
+    {
+      "query": "味道怎么样发什么快递",
+      "gold": "courier",
+      "predicted": "courier",
+      "confidence": 0.6431,
+      "matched": "请问发什么快递"
+    }
+  ],
+  "false_answer": [
+    {
+      "query": "袜子换购怎么弄",
+      "gold": "oos",
+      "predicted": "exchange",
+      "confidence": 0.7422,
+      "matched": "换货流程是怎样的"
+    },
+    {
+      "query": "就是没打开的茶饼能放进盒子吗那个镂空盒子",
+      "gold": "oos",
+      "predicted": "package",
+      "confidence": 0.6988,
+      "matched": "有礼盒装吗"
+    },
+    {
+      "query": "哎哟",
+      "gold": "oos",
+      "predicted": "thanks",
+      "confidence": 0.7291,
+      "matched": "哦哦"
+    },
+    {
+      "query": "嗯别发错了",
+      "gold": "oos",
+      "predicted": "wrong_item",
+      "confidence": 0.7131,
+      "matched": "你们发错东西了"
+    },
+    {
+      "query": "没有个大概时间",
+      "gold": "oos",
+      "predicted": "arrival_time",
+      "confidence": 0.7378,
+      "matched": "大概要等几天"
+    },
+    {
+      "query": "没送吗",
+      "gold": "oos",
+      "predicted": "gift",
+      "confidence": 0.7369,
+      "matched": "有没有赠品"
+    },
+    {
+      "query": "如果不行就退款吧",
+      "gold": "oos",
+      "predicted": "cancel_order",
+      "confidence": 0.7216,
+      "matched": "还没发货可以退款吗"
+    },
+    {
+      "query": "怎么发不过来",
+      "gold": "oos",
+      "predicted": "urge_ship",
+      "confidence": 0.7282,
+      "matched": "我的订单为什么一直没发"
+    },
+    {
+      "query": "地址对的",
+      "gold": "oos",
+      "predicted": "change_address",
+      "confidence": 0.7077,
+      "matched": "地址错了"
+    },
+    {
+      "query": "你说没有防腐剂那是怎么保鲜的呢亲",
+      "gold": "oos",
+      "predicted": "storage",
+      "confidence": 0.7831,
+      "matched": "怎么保存没吃过"
+    },
+    {
+      "query": "怎么领",
+      "gold": "oos",
+      "predicted": "coupon",
+      "confidence": 0.806,
+      "matched": "哪里可以领券"
+    },
+    {
+      "query": "我以为一包10片的呢",
+      "gold": "oos",
+      "predicted": "spec",
+      "confidence": 0.7027,
+      "matched": "一份是不是6个"
+    },
+    {
+      "query": "地址不是一个地方",
+      "gold": "oos",
+      "predicted": "change_address",
+      "confidence": 0.7312,
+      "matched": "地址错了"
+    },
+    {
+      "query": "我一起下的单你不可能给我分两份装吧",
+      "gold": "oos",
+      "predicted": "merge_order",
+      "confidence": 0.6901,
+      "matched": "多个订单可以合成一个包裹吗"
+    },
+    {
+      "query": "我也没让你优惠",
+      "gold": "oos",
+      "predicted": "discount",
+      "confidence": 0.7794,
+      "matched": "能优惠点吗"
+    },
+    {
+      "query": "你们不是一家吗",
+      "gold": "oos",
+      "predicted": "compare",
+      "confidence": 0.7469,
+      "matched": "这2种是一样的吗"
+    },
+    {
+      "query": "也送可以吗",
+      "gold": "oos",
+      "predicted": "gift",
+      "confidence": 0.7694,
+      "matched": "送的有礼品吗"
+    },
+    {
+      "query": "好好了",
+      "gold": "oos",
+      "predicted": "thanks",
+      "confidence": 0.8229,
+      "matched": "好的吧"
+    },
+    {
+      "query": "中秋您做月饼吗我们家可以品牌授权和支持一件代发",
+      "gold": "oos",
+      "predicted": "agency",
+      "confidence": 0.7295,
+      "matched": "可以一件代发吗"
+    }
+  ],
+  "wrong_answer": [
+    {
+      "query": "记得送赠品哦我已经付款给我最新的生产日期好久可以发货",
+      "gold": "ship_time",
+      "predicted": "urge_ship",
+      "confidence": 0.7023,
+      "matched": "什么时候发货呀都好几天了"
+    },
+    {
+      "query": "你好昨天没有发货是没有货吗",
+      "gold": "urge_ship",
+      "predicted": "ship_time",
+      "confidence": 0.7859,
+      "matched": "今天不发货嘛"
+    },
+    {
+      "query": "你们都没有给我优惠我买了那么多",
+      "gold": "discount",
+      "predicted": "coupon_fail",
+      "confidence": 0.7787,
+      "matched": "为什么没有优惠五元"
+    },
+    {
+      "query": "好的好的我真的很急很急很急啊啊啊",
+      "gold": "urge_ship",
+      "predicted": "thanks",
+      "confidence": 0.7679,
+      "matched": "哦好的谢谢"
+    },
+    {
+      "query": "那就不要先下次再买吧我们学校要放假了要不我选退货吧",
+      "gold": "cancel_order",
+      "predicted": "return_policy",
+      "confidence": 0.7819,
+      "matched": "买回来不想要了能退货吗"
+    }
+  ]
+}

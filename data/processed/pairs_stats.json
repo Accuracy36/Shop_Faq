@@ -1,0 +1,56 @@
+{
+  "LCQMC/validation": {
+    "raw": 8802,
+    "kept": 8773,
+    "positive": 4381,
+    "removed_as_held_out": 0
+  },
+  "LCQMC/test": {
+    "raw": 12500,
+    "kept": 12461,
+    "positive": 6228,
+    "removed_as_held_out": 0
+  },
+  "LCQMC/train": {
+    "raw": 238766,
+    "kept": 225565,
+    "positive": 127382,
+    "removed_as_held_out": 2885
+  },
+  "BQ/validation": {
+    "raw": 10000,
+    "kept": 9996,
+    "positive": 4997,
+    "removed_as_held_out": 0
+  },
+  "BQ/test": {
+    "raw": 10000,
+    "kept": 9995,
+    "positive": 4995,
+    "removed_as_held_out": 0
+  },
+  "BQ/train": {
+    "raw": 100000,
+    "kept": 99889,
+    "positive": 49910,
+    "removed_as_held_out": 18
+  },
+  "AFQMC/validation": {
+    "raw": 4316,
+    "kept": 4316,
+    "positive": 1338,
+    "removed_as_held_out": 0
+  },
+  "AFQMC/test": {
+    "raw": 3861,
+    "kept": 0,
+    "positive": 0,
+    "removed_as_held_out": 0
+  },
+  "AFQMC/train": {
+    "raw": 34334,
+    "kept": 34333,
+    "positive": 10573,
+    "removed_as_held_out": 0
+  }
+}

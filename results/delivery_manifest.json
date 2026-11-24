@@ -1,0 +1,64 @@
+{
+  "updated": "2026-11-21T01:36:01-08:00",
+  "lab8_queue_seconds": 2057.78,
+  "project_queue_seconds": 3930.28,
+  "archives": [
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\HWs\\8\\PB24000178_周宇翔_8_源码与结果.zip",
+      "files": 289,
+      "bytes": 12690451,
+      "sha256": "f132577fbadbc0b76317bbc1baab9a67be895419de66f46d10e0427963bdcc1f"
+    },
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\PB24000178+周宇翔+简易购物自动问答系统_源码与结果.zip",
+      "files": 241,
+      "bytes": 3193597,
+      "sha256": "d424c69dc671ee56a1cb0d135f34ad9e78b46f80272cd770c47e2ebc46918c71"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\HWs\\8\\PB24000178_周宇翔_8.docx",
+      "bytes": 942369,
+      "sha256": "07a6ddc7390087ba232d98143b247c133d4e697be25f519c4635f8b37da8452b"
+    },
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\HWs\\8\\PB24000178_周宇翔_8.pdf",
+      "bytes": 1667109,
+      "sha256": "02dbc82e65836eac7fa137458e6a0ef02cc1470377341ec618b7c88731879977"
+    },
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\report\\PB24000178+周宇翔+简易购物自动问答系统.docx",
+      "bytes": 1482989,
+      "sha256": "9fbdb160fe2462b163764d54ba9f7231979f62715c2e7a8cb74a63650f6d455c"
+    },
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\report\\PB24000178+周宇翔+简易购物自动问答系统.pdf",
+      "bytes": 1933367,
+      "sha256": "156ef6a5557260ddc66e5b26da0b65f454464825e9ca84728682d8de453a1a17"
+    },
+    {
+      "path": "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\PB24000178+周宇翔+简易购物自动问答系统.mp4",
+      "bytes": 1834744,
+      "sha256": "a1417cf8ae156876886838fe33d3f65dd7628869c5826f3f2dfdf1c355494456"
+    }
+  ],
+  "lab8_e40_train_seconds": 1577.8850576877594,
+  "finishing_time_note": "Report/video/layout finishing spanned resumed sessions and was not continuously timed; no continuous duration is claimed.",
+  "checks": {
+    "archive_crc_and_all_file_sha256_pass": true,
+    "required_sources_present": true,
+    "no_weights_caches_or_unrelated_project": true,
+    "report_pages_reviewed": 79,
+    "video_seconds": 57.6
+  },
+  "queue": {
+    "all_executed_exits_zero": true,
+    "reused": [
+      "eval_tfidf",
+      "eval_bm25",
+      "eval_bm25_real"
+    ],
+    "executed": 53
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "full_video_decodes": true,
+    "duration_10_to_120_seconds": true,
+    "frame_size_1280_720": true,
+    "final_model": true,
+    "real_index_and_rejection": true,
+    "normal_question_answered": true,
+    "paraphrase_answered": true,
+    "out_of_scope_rejected": true,
+    "eleven_live_responses": true
+  },
+  "metadata": {
+    "ffmpeg_version": "9.0.2-essentials_build-www.gyan.dev built with gcc 16.2.0 (Rev3, Built by MSYS2 project)",
+    "codec": "h264",
+    "pix_fmt": "yuv420p(progressive)",
+    "fps": 25.0,
+    "source_size": [
+      1280,
+      720
+    ],
+    "size": [
+      1280,
+      720
+    ],
+    "rotate": 0,
+    "duration": 57.6
+  },
+  "frames": [
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_6.0.png",
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_14.0.png",
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_34.0.png",
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_50.0.png",
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_57.0.png",
+    "D:\\!WorkSpace\\2026 Fall Deep Learning\\Project\\demo\\video\\qa\\frame_55.6.png"
+  ],
+  "decoder_exit": 0
+}

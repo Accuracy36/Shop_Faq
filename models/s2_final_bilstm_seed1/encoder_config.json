@@ -1,0 +1,36 @@
+{
+  "arch": "bilstm",
+  "pooling": "mean",
+  "stage": "faq",
+  "args": {
+    "mode": "faq",
+    "init": "s1_bilstm_seed1",
+    "name": "s2_final_bilstm_seed1",
+    "real": true,
+    "oos": 60,
+    "oos_margin": 0.3,
+    "oos_weight": 1.0,
+    "pseudo": "",
+    "real_index": true,
+    "reject": true,
+    "steps": 200,
+    "eval_every": 25,
+    "lr": 0.0001,
+    "batch_size": 128,
+    "temperature": 0.05,
+    "seed": 1,
+    "grad_ckpt": false,
+    "mem_frac": 0.55
+  },
+  "best": {
+    "step": 200,
+    "train_loss": 2.2551351737976075,
+    "seconds": 11.40125322341919,
+    "faq_top1_exp": 0.6821192052980133,
+    "faq_mrr_exp": 0.766850625459897,
+    "faq_e2e_acc": 0.6966666666666667,
+    "threshold": 0.8228588104248047,
+    "dev_score": 0.7317586460632819
+  },
+  "parameters": 4123648
+}

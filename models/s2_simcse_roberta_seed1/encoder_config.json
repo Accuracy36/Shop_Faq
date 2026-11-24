@@ -1,0 +1,36 @@
+{
+  "arch": "roberta",
+  "pooling": "mean",
+  "stage": "simcse",
+  "args": {
+    "mode": "simcse",
+    "init": "s1_roberta_seed1",
+    "name": "s2_simcse_roberta_seed1",
+    "real": false,
+    "oos": 0,
+    "oos_margin": 0.3,
+    "oos_weight": 1.0,
+    "pseudo": "",
+    "real_index": false,
+    "reject": false,
+    "steps": 200,
+    "eval_every": 25,
+    "lr": 1e-05,
+    "batch_size": 128,
+    "temperature": 0.05,
+    "seed": 1,
+    "grad_ckpt": true,
+    "mem_frac": 0.55
+  },
+  "best": {
+    "step": 0,
+    "train_loss": null,
+    "seconds": 0.0,
+    "faq_top1_exp": 0.7748344370860927,
+    "faq_mrr_exp": 0.843393251340271,
+    "faq_e2e_acc": 0.6633333333333333,
+    "threshold": 0.847786009311676,
+    "dev_score": 0.7533632923368021
+  },
+  "parameters": 101677056
+}

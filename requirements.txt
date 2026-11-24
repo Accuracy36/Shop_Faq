@@ -1,0 +1,15 @@
+# 本次实际运行的版本（Python 3.12.14，Windows 11，RTX 5060 Laptop GPU 8 GB）
+# PyTorch 按显卡驱动选择安装源，例如：pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu130
+torch==2.10.0
+transformers==5.23.0
+tokenizers==0.23.3
+numpy==2.5.2
+pandas==3.1.0
+pyarrow==26.0.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+Flask==3.1.3
+# 以下只在下载数据、录制演示视频时需要
+gdown==6.5.1
+playwright==1.65.2
+imageio-ffmpeg==0.8.1

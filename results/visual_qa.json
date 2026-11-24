@@ -1,0 +1,121 @@
+{
+  "reviewed": "2026-11-21T01:35:59-08:00",
+  "reviewer": "Codex visual inspection of every rendered page, including revised pages",
+  "document_hashes": {
+    ".docx": "9fbdb160fe2462b163764d54ba9f7231979f62715c2e7a8cb74a63650f6d455c",
+    ".pdf": "156ef6a5557260ddc66e5b26da0b65f454464825e9ca84728682d8de453a1a17"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "sha256": "b4c515959a1c6e825609bae2adbcb8b01d0640e5e4b049f59f7c7d71293e96d5"
+    },
+    {
+      "page": 2,
+      "sha256": "0298b8ac999ff99abe8ba5980c8af757b5aa042232bfd4967e9fc05f4ed6220c"
+    },
+    {
+      "page": 3,
+      "sha256": "78f3e6ae77ad829d73efab5811ec5dec6e9ba69193795936fe06f67a030cc536"
+    },
+    {
+      "page": 4,
+      "sha256": "4c1f5d0ccf5424fdb078a34dac47ee173cc3ff0af34039f6829d5344034bffb9"
+    },
+    {
+      "page": 5,
+      "sha256": "f91fce2c4158ae90addc390bb6611944c368407ea830507429cf4fc2ab982a7b"
+    },
+    {
+      "page": 6,
+      "sha256": "d8c996442708888981922e6bc7b67acaf6e1f5dde89960980467f65ac859fe8e"
+    },
+    {
+      "page": 7,
+      "sha256": "c8e8089bcfed7aa39d41dccddf16517e57f418be598d52373b697a9e33918d1c"
+    },
+    {
+      "page": 8,
+      "sha256": "b53f4371a922c33c7c796a8d034cab3830b5d9152df6d53185c3d727773a78a1"
+    },
+    {
+      "page": 9,
+      "sha256": "2dcae1dd71a54b76ddcf83aadae0bdf2ab4436ee8346f351ce3636743e544aa7"
+    },
+    {
+      "page": 10,
+      "sha256": "b176ba6137b89922cbd83d209c033ac34c26fcbdb746ead1b6e0488be284af5e"
+    },
+    {
+      "page": 11,
+      "sha256": "6f48ea1397a25f4120b2cc0a8fae01a1eb32c5e94a861e8436dd686992388f9f"
+    },
+    {
+      "page": 12,
+      "sha256": "d5f74cd8737025bd2416e0d048ecbc3276887b6e903b4c14b681019530c03d94"
+    },
+    {
+      "page": 13,
+      "sha256": "c62f2c220fa9cc55e3c723a8dc37a247e7e81669bbbfc218e3f0ee2bd6e99c04"
+    },
+    {
+      "page": 14,
+      "sha256": "5135ccddfc8da7297843acdb31640d4f8a96cc1acc1609194e4d2237e33298fc"
+    },
+    {
+      "page": 15,
+      "sha256": "9279e7f53bba3aefe6284d291712bd3037369b480178385bb177f70befd2bee8"
+    },
+    {
+      "page": 16,
+      "sha256": "66b9cb517fa4368117cf0eb240381ee79a3f91224f2f9e70e270bf29180877f7"
+    },
+    {
+      "page": 17,
+      "sha256": "8b39540df526d49eea568685a38b96b0118d7a6848e841432140141f57b0b6cd"
+    },
+    {
+      "page": 18,
+      "sha256": "bbe7c301db3283186a7a83328c8767beb6d845dfa0433bd8ec01e378a2a77f58"
+    },
+    {
+      "page": 19,
+      "sha256": "02f43f9d6633fdc090c86e34d82dcc3c1386ecd9f11f390bd48cecae6e8ebf2d"
+    },
+    {
+      "page": 20,
+      "sha256": "8c72f787292c6972ed0c505c965210cac6c7f2739a53064b94dc1c3ab1aee7f0"
+    },
+    {
+      "page": 21,
+      "sha256": "254f67cb5d26b92ccbbaeb11388f4ab67ae5fe36946ddbb0a9f5940049e6d482"
+    },
+    {
+      "page": 22,
+      "sha256": "7e16627dab3c4f46a2ce5ae11a87af3bf6f4c36ab017fb6144421fe8485e0f5e"
+    }
+  ],
+  "checks": {
+    "all_pages_reviewed": true,
+    "chinese_and_math_readable": true,
+    "tables_and_figures_readable": true,
+    "no_overflow_or_clipping": true,
+    "page_numbers_and_pagination": true,
+    "report_hash_matches_verified": true,
+    "video_text_and_actual_responses_readable": true
+  },
+  "video_keyframes_reviewed_seconds": [
+    6,
+    14,
+    34,
+    50,
+    55.6,
+    57
+  ],
+  "layout_fixes": [
+    "Table headers split deliberately",
+    "Stage2 plot spacing",
+    "Category labels enlarged",
+    "Latency shows actual CPU/GPU means and sample SD"
+  ]
+}
